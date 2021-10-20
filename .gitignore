@@ -1,0 +1,15 @@
+/node_modules
+/public/hot
+/public/storage
+/public/images/pay_qrcode/*.jpg
+/public/images/pay_page/*.jpg
+/storage/*.key
+/vendor
+.env
+.env.*
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+composer.*

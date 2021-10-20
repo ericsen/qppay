@@ -1,0 +1,175 @@
+<!-- 這是註記 -->
+<div class="container-fluid p-0">
+
+    <div class="pageBox" id="homePage">
+        <div class="card bg-light m-1 mb-3">
+            <div class="card-header text-b14 langClass">@totalTitle</div>
+            <div class="card-body p-3">
+                <h5 class="card-title langClass">@totalSuccessCommPoints</h5>
+                <p class="card-text text-b12" id="totalSuccessCommPoints">0</p>
+                <h5 class="card-title langClass">@totalSuccessGetCount</h5>
+                <p class="card-text text-b12" id="totalSuccessGetCount">0</p>
+                <h5 class="card-title langClass">@totalSuccessGetPoints</h5>
+                <p class="card-text text-b12" id="totalSuccessGetPoints">0</p>
+                <h5 class="card-title langClass">@totalSuccessSendCount</h5>
+                <p class="card-text text-b12" id="totalSuccessSendCount">0</p>
+                <h5 class="card-title langClass">@totalSuccessSendPoints</h5>
+                <p class="card-text text-b12" id="totalSuccessSendPoints">0</p>
+            </div>
+        </div>
+
+        <div class="card bg-light m-1 mb-3">
+            <div class="card-header text-b14 langClass">@memberTitle</div>
+            <div class="card-body p-3">
+                <h4 class="card-title langClass">@accountMember</h4>
+                <p class="card-text" id="accountMember"></p>
+                <h4 class="card-title langClass">@nameMember</h4>
+                <p class="card-text" id="nameMember"></p>
+                <h4 class="card-title langClass">@perc</h4>
+                <p class="card-text text-b12" id="perc"></p>
+                <h4 class="card-title langClass">@points</h4>
+                <p class="card-text text-b12 points"></p>
+            </div>
+        </div>
+
+        <div class="card bg-light m-1 mb-3">
+            <div class="card-header text-b14 langClass">@memberMineTitle</div>
+            <div class="card-body p-3" id="memberMineBody">
+            </div>
+        </div>
+
+        <div class="card bg-light m-1 mb-3">
+            <div class="card-header text-b14 langClass">@memberPayTitle</div>
+            <div class="card-body p-3">
+                <h4 class="card-title langClass">@bankPay</h4>
+                <p class="card-text" id="bankPay"></p>
+                <h4 class="card-title langClass">@accountPay</h4>
+                <p class="card-text" id="accountPay"></p>
+                <h4 class="card-title langClass">@codePay</h4>
+                <p class="card-text" id="codePay"></p>
+                <h4 class="card-title noPayClass langClass">@noPay</h4>
+                <p class="card-text noPayClass" id="noPay"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pageBox" id="orderPage" style="display: none;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top p-1">
+            <h4 class="navbar-brand text-center m-auto langClass">@order</h4>
+        </nav>
+        <div class="pt-5">
+            <ul class="nav nav-tabs nav-fill mt-2 span12" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link langClass active" id="orderPageBoxTab" data-toggle="tab" href="#orderPageBox" role="tab" aria-controls="orderPageBox" aria-selected="true">
+                        @orderBox
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link langClass" id="orderPageSuccessBoxTab" data-toggle="tab" href="#orderPageSuccessBox" role="tab" aria-controls="orderPageSuccessBox" aria-selected="false">
+                        @orderSuccessBox
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="orderPageBox" role="tabpanel" aria-labelledby="orderPageBoxTab"></div>
+                <div class="tab-pane fade" id="orderPageSuccessBox" role="tabpanel" aria-labelledby="orderPageSuccessBoxTab"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pageBox" id="commPage" style="display: none;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top p-1">
+            <h4 class="navbar-brand text-center m-auto langClass">@comm</h4>
+        </nav>
+        <div class="pt-5" id="commPageBox"></div>
+    </div>
+
+    <!-- 懸浮 -->
+    <div id="fixedBox">
+        <!-- 重整 -->
+        <div class="text-danger mb-4" align="center" id="reGetBtn"><i class="fas fa-sync-alt"></i></div>
+
+        <!-- 搜尋工具 -->
+        <div class="" align="center" id="searchModalBtn">
+            <button type="button" class="btn btn-link text-primary p-0" data-toggle="modal" data-target="#searchModal"><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- 回到頂端 -->
+        <div class="text-warning mt-3" align="center" id="upTop"><i class="fas fa-angle-double-up"></i></div>
+    </div>
+
+
+    <!-- 搜尋工具彈窗 -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title langClass" id="searchModalTitle">@searchTools</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="langClass" for="searchTransactionID" id="searchTransactionIDLabel">@transactionID</label>
+                        <input type="text" class="form-control" id="searchTransactionID">
+                    </div>
+                    <div class="form-group">
+                        <label class="langClass" for="searchPoints">@points</label>
+                        <input type="text" class="form-control" id="searchPoints">
+                    </div>
+                    <div class="form-group">
+                        <label class="langClass">@startDate</label>
+                        <div class="input-group">
+                            <select class="custom-select selectSMonth">
+                                @@dateMonth@@
+                            </select>
+                            <span class="input-group-text langClass">@month</span>
+                            <select class="custom-select selectSDay">
+                                @@dateDay@@
+                            </select>
+                            <span class="input-group-text langClass">@day</span>
+                        </div>
+                        <label class="langClass">@endDate</label>
+                        <div class="input-group">
+                            <select class="custom-select selectEMonth">
+                                @@dateMonth@@
+                            </select>
+                            <span class="input-group-text langClass">@month</span>
+                            <select class="custom-select selectEDay">
+                                @@dateDay@@
+                            </select>
+                            <span class="input-group-text langClass">@day</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success langClass" id="searchRun" data-dismiss="modal">@search</button>
+                    <button type="button" class="btn btn-danger langClass" id="searchClear">@clear</button>
+                    <button type="button" class="btn btn-secondary langClass" data-dismiss="modal">@close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-bottom p-0">
+        <div class="btn-group span12 p-0" role="group">
+            <button type="button" class="btn btn-success btn-lg menuBtnClass" id="homeBtn">
+                <i class="fas fa-home"></i><br>
+                <span class="langClass">@home</span>
+            </button>
+            <button type="button" class="btn btn-info btn-lg menuBtnClass" id="orderBtn">
+                <i class="fas fa-scroll"></i><br>
+                <span class="langClass">@order</span>
+            </button>
+            <button type="button" class="btn btn-info btn-lg menuBtnClass" id="commBtn">
+                <i class="fas fa-chart-line"></i><br>
+                <span class="langClass">@comm</span>
+            </button>
+            <button type="button" class="btn btn-info btn-lg menuBtnClass" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i><br>
+                <span class="langClass">@logout</span>
+            </button>
+        </div>
+    </nav>
+</div>

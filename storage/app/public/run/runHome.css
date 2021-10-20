@@ -1,0 +1,152 @@
+@font-face {
+    font-family: NotoSansSC;
+    src: url(./fonts/NotoSansSC-Medium.otf);
+}
+@font-face {
+    font-family: GenJyuuGothic;
+    src: url(./fonts/GenJyuuGothicL-Monospace-Medium.ttf);
+}
+
+html, body{
+    margin: 0;
+    max-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    font: 16px GenJyuuGothic, NotoSansSC;/* , OpenSans, SegoeUI, Arial;*/
+    /*font-size: 16px;*/
+}
+
+.text-b03{font-size: 0.3rem;}
+.text-b04{font-size: 0.4rem;}
+.text-b05{font-size: 0.5rem;}
+.text-b06{font-size: 0.6rem;}
+.text-b07{font-size: 0.7rem;}
+.text-b08{font-size: 0.8rem;}
+.text-b09{font-size: 0.9rem;}
+.text-b10{font-size: 1.0rem;}
+.text-b11{font-size: 1.1rem;}
+.text-b12{font-size: 1.2rem;}
+.text-b13{font-size: 1.3rem;}
+.text-b14{font-size: 1.4rem;}
+.text-b15{font-size: 1.5rem;}
+.text-b16{font-size: 1.6rem;}
+.text-b17{font-size: 1.7rem;}
+.text-b18{font-size: 1.8rem;}
+.text-b19{font-size: 1.9rem;}
+.text-b20{font-size: 2.0rem;}
+.text-b21{font-size: 2.1rem;}
+.text-b22{font-size: 2.2rem;}
+.text-b23{font-size: 2.3rem;}
+.text-b24{font-size: 2.4rem;}
+.text-b25{font-size: 2.5rem;}
+.img-rot90{-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-ms-transform: rotate(90deg);-o-transform: rotate(90deg);transform: rotate(90deg);}
+.img-rot180{-webkit-transform: rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);}
+.mt-5_5{margin-top:4.5rem !important;}
+.pb-5_5{padding-bottom:4.5rem !important;}
+.pt-5_5{padding-top:4.5rem !important;}
+.pst-r{position:relative;}
+.pst-f{position:fixed;top:0;left:0;}
+
+.mt-6{margin-top:5rem !important;}
+.mt-7{margin-top:6rem !important;}
+
+.pt-6{padding-top:5rem !important;}
+.pt-7{padding-top:6rem !important;}
+
+.text-ye{color:#EEB422;}
+.text-pu{color:#68228B;}
+.text-pi{color:#CD6889;}
+.text-tomato {color:#FF6347;}
+.text-og{color:#FF8800;}
+
+.btn-pink{color:#fff;background-color:#CD6889;border-color:#CD6889;}
+
+.cardShadow{-moz-box-shadow:2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4);-webkit-box-shadow:2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4);box-shadow:2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4);}
+.cardShadowLight{-moz-box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);-webkit-box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);}
+
+/*滑鼠指標的變化*/
+.mouseCursor {
+    cursor: pointer;
+}
+
+.loadingBox{
+    margin-top: 40vh;
+}
+.loadingBoxShort{
+
+}
+
+.pageBox{
+    width: 100%;
+    height: 91vh;
+    min-height: 91vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+#orderPageBox, #orderPageSuccessBox{
+    width: 100%;
+    height: 79vh;
+    min-height: 79vh;
+    max-height: 79vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+#commPageBox{
+    width: 100%;
+    height: 91vh;
+    min-height: 91vh;
+    max-height: 91vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+#fixedBox{
+    width: 40px;
+    max-width: 40px;
+    position: fixed;
+    bottom: 12vh;
+    left: 10px;
+    display: none;
+}
+/*快速向上*/
+#upTop {
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+}
+/*搜尋工具*/
+#reGetBtn {
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+}
+/*重新整理頁面*/
+#searchModalBtn button {
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+}
+
+
+
+/** 訊息提示  */
+#messageBox, #messageLoadBox, #messageErrorBox {
+    width: 90vw;
+    position: fixed;
+    bottom: 10vh;
+    left: 5vw;
+    z-index: 4001;
+    display: none;
+}
+#messageLoadBox {
+    bottom: 20vh;
+}
+#messageErrorBox {
+    bottom: 30vh;
+}
+
